@@ -1,0 +1,7 @@
+export {
+  REGISTRATION_ROUTE,
+  LOGIN_ROUTE,
+  UPLOADING_ROUTE,
+  MUSIC_LIST_ROUTE,
+  API_URL
+} from "./consts"
