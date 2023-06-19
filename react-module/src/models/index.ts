@@ -7,3 +7,5 @@ export type { PaginationModel } from "./paginationModel";
 export type { TrackModel } from "./trackModel";
 export type { SortModel } from "./sortModel";
 export type { SortParams } from "./sortParams";
+export type { ReportReasonModel } from "./reportReasonModel";
+export type { TrackReportModel } from "./trackReportModel";

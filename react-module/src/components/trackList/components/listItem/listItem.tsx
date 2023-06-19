@@ -1,12 +1,14 @@
 import { TrackModel } from "models"
+
 import styles from "./listItem.module.css"
 
 export interface ListItemProps {
   counter: number,
-  track: TrackModel
+  track: TrackModel,
+  onReportClick: () => void
 }
 
-export const ListItem = ({ counter, track }: ListItemProps) => {
+export const ListItem = ({ counter, track, onReportClick }: ListItemProps) => {
   return (
     <>
       <div className={styles["track-list-item"]}>
@@ -19,7 +21,9 @@ export const ListItem = ({ counter, track }: ListItemProps) => {
         </div>
         {track.inReview
           ? <div className={styles["track-list-item-review"]}>In review</div>
-          : <div className={styles["track-list-item-check-button"]}>Need check</div>}
+          : <div
+            className={styles["track-list-item-check-button"]}
+            onClick={onReportClick}>Need check</div>}
       </div>
     </>
   )

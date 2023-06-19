@@ -4,9 +4,10 @@ import { ListHeader } from "./components/listHeader";
 import { SortModel, SortParams, TrackModel } from "models";
 import { TracksService } from "services/trackService";
 import loaderImage from '../../images/loader.gif';
+import { ListItem } from "./components/listItem";
+import { ModalWindow } from "./components/modalWindow";
 
 import styles from "./trackList.module.css"
-import { ListItem } from "./components/listItem";
 
 export const TrackList = () => {
   const [page, setPage] = useState(1);
@@ -18,6 +19,7 @@ export const TrackList = () => {
   const [success, setSuccess] = useState<boolean>(false);
   const [firstLoad, setFirstLoad] = useState<boolean>(true);
   const [counter, setCounter] = useState<number>(1);
+  const [modalTrack, setModalTrack] = useState<TrackModel | undefined>();
 
   useEffect(() => {
     const params: SortParams = {
@@ -67,6 +69,7 @@ export const TrackList = () => {
             tracks.map((t, index) => <ListItem
               counter={counter + index}
               track={t}
+              onReportClick={() => setModalTrack(t)}
               key={counter + index} />)
           }
         </div>}
@@ -76,6 +79,9 @@ export const TrackList = () => {
           pageSize={pageSize}
           onPageChange={(page: number) => setPage(page)}
           onPageSizeChange={(pageSize: number) => setPageSize(pageSize)} />}
+        {modalTrack && <ModalWindow
+          track={modalTrack}
+          onCloseClick={() => setModalTrack(undefined)} />}
       </div>
     </>
   );
