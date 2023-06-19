@@ -9,7 +9,7 @@ body::-webkit-scrollbar {
   display: none;
 }
 
-main {
+.main {
   margin: 40px 100px;
   display: flex;
   flex-direction: column;
