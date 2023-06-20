@@ -27,7 +27,7 @@ export const Pagination = ({
     currentPage
   }) as (number | string)[];
 
-  if (currentPage === 0 || paginationRange.length < 2) {
+  if (currentPage === 0 || paginationRange.length < 1) {
     return null;
   }
 

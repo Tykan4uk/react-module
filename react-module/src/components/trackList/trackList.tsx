@@ -64,7 +64,7 @@ export const TrackList = () => {
           src={loaderImage}
           alt="loader"
           className={styles["track-list-loader"]} />}
-        {!firstLoad && success && <div className={styles["track-list"]}>
+        {!firstLoad && success && !loader && <div className={styles["track-list"]}>
           {
             tracks.map((t, index) => <ListItem
               counter={counter + index}
