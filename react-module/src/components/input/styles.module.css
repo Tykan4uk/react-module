@@ -1,0 +1,33 @@
+.validBorder,
+.invalidBorder {
+  border: 2px #3d8af7 solid;
+  border-radius: 5px;
+  width: 360px;
+  padding: 8px;
+  margin: 10px;
+  position: relative;
+  background-color: white;
+}
+
+.invalidBorder {
+  border: 2px #971311 solid;
+}
+
+.label {
+  position: absolute;
+  background-image: linear-gradient(transparent 0px, white 7px);
+  padding: 0 5px;
+  top: -8px;
+  left: 10px;
+  font-size: 14px;
+}
+
+.error,
+.errorPlaceholder {
+  width: 370px;
+  height: 40px;
+  padding: 5px;
+  color: #971311;
+  font-size: 14px;
+  font-weight: bold;
+}

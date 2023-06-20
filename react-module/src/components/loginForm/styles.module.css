@@ -1,0 +1,49 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 3px #3d8af7 solid;
+  border-radius: 10px;
+  padding: 0 40px 40px 40px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: aliceblue;
+}
+
+.signinError,
+.errorPlaceholder {
+  height: 20px;
+  padding: 10px 0;
+  color: #971311;
+}
+
+.inputField {
+  width: 355px;
+  border: none;
+  outline: none;
+}
+
+.buttons {
+  width: 372px;
+  display: flex;
+}
+
+.submitButton,
+.homeButton {
+  width: 170px;
+  height: 40px;
+  font-size: 16px;
+  border: 1px #3d8af7;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.15);
+  background-color: #b1d2ff;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Helvetica';
+}
